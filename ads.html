@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: transparent;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>РСЯ Баннер</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+    .ad-container {
+      width: 400px;
+      height: 50px;
+      border: 1px dashed #ccc;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+  </style>
 
-    <!-- Yandex.RTB -->
-    <script>window.yaContextCb=window.yaContextCb||[]</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
+  <!-- Загрузчик РСЯ -->
+  <script>window.yaContextCb = window.yaContextCb || [];</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 <body>
-    <!-- Yandex.RTB R-A-16308098-1 -->
+  <div class="ad-container">
+    <!-- Рекламный блок -->
     <div id="yandex_rtb_R-A-16308098-1"></div>
     <script>
-        window.yaContextCb.push(() => {
-            Ya.Context.AdvManager.render({
-                blockId: "R-A-16308098-1",
-                renderTo: "yandex_rtb_R-A-16308098-1"
-            })
+      window.yaContextCb.push(() => {
+        Ya.Context.AdvManager.render({
+          blockId: "R-A-16308098-1",
+          renderTo: "yandex_rtb_R-A-16308098-1"
         });
+      });
     </script>
+  </div>
 </body>
 </html>
